@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Management System</title>
+</head>
+<body>
+<div align="center">
+<a th:href = "@{/showNewEmployeeForm}">Add Employee</a><br>
+<h1>Employees List</h1>
+<table border="1">
+<thead>
+<tr>
+<th>Employee Name</th>
+<th>Email</th>
+<th>Salary</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="employee :${listEmployees}">
+<td th:text ="${employee.name}"></td>
+<td th:text ="${employee.email}"></td>
+<td th:text ="${employee.salary}"></td>
+<td ><a th:href = "@{/showFormForUpdate/{id}(id=${employee.id})}">UPDATE </a>&nbsp;
+<a th:href = "@{/deleteEmployee/{id}(id=${employee.id})}">DELETE</a></td>
+
+
+
+</tr>
+</tbody>
+</table>
+</div>
+
+</body>
+</html>
