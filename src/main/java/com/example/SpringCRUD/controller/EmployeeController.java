@@ -15,8 +15,9 @@ import com.example.SpringCRUD.service.EmployeeService;
 public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeservice;
+	
 	@GetMapping("/")
-	public String viewHomePage(Model model) {
+	public String showEmployee(Model model) {
 		model.addAttribute("listEmployees",employeeservice.getAllEmployees());
 		return "index";
 	}

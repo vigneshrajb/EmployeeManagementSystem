@@ -19,7 +19,7 @@ public class Employee {
 	@Column(name="email")
 	private String email;
 	@Column(name="salary")
-	private double salary;
+	private int salary;
 	public long getId() {
 		return id;
 	}
@@ -38,10 +38,10 @@ public class Employee {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public double getSalary() {
+	public int getSalary() {
 		return salary;
 	}
-	public void setSalary(double salary) {
+	public void setSalary(int salary) {
 		this.salary = salary;
 	}
 	
